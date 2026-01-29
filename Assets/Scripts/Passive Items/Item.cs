@@ -1,0 +1,100 @@
+using System.Collections.Generic;
+using UnityEngine;
+public abstract class Item : MonoBehaviour
+{
+    public int currentLevel = 1, maxLevel = 1;
+    [HideInInspector] public ItemData data;
+    protected ItemData.Evolution[] evolutionData;
+    protected PlayerInventory inventory;
+    protected PlayerStats owner;
+
+    [System.Serializable]
+    public class LevelData
+    {
+        public string name, description;
+    }
+
+    public PlayerStats Owner { get { return owner; } }
+
+    public virtual void Initialise(ItemData data)
+    {
+        maxLevel = data.maxLevel;
+        evolutionData = data.evolutionData;
+        inventory = GetComponentInParent<PlayerInventory>();
+        owner = GetComponentInParent<PlayerStats>();
+    }
+
+    public virtual ItemData.Evolution[] CanEvolve(int levelUpAmount = 1)
+    {
+        List<ItemData.Evolution> possibleEvolutions = new List<ItemData.Evolution>();
+
+        foreach (ItemData.Evolution e in evolutionData)
+        {
+            if (CanEvolve(e, levelUpAmount)) possibleEvolutions.Add(e);
+        }
+
+
+        return possibleEvolutions.ToArray();
+    }
+
+    public virtual bool CanEvolve(ItemData.Evolution evolution, int levelUpAmount = 1)
+    {
+        if (evolution.evolutionLevel > currentLevel + levelUpAmount)
+        {
+            Debug.LogWarning(string.Format("Evolution failed. Current level {0}, evolution level {1}", currentLevel, evolution.evolutionLevel));
+            return false;
+        }
+
+        foreach (ItemData.Evolution.Config c in evolution.catalysts)
+        {
+            Item item = inventory.Get(c.itemType);
+            if (!item || item.currentLevel < c.level)
+            {
+                Debug.LogWarning(string.Format("Evolution failed. Missing {0}", c.itemType.name));
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public virtual bool AttemptEvolution(ItemData.Evolution evolutionData, int levelUpAmount = 1, bool updateUI = true)
+    {
+        if (!CanEvolve(evolutionData, levelUpAmount))
+            return false;
+
+        bool consumePassives = (evolutionData.consumes & ItemData.Evolution.Consumption.passives) > 0;
+        bool consumeWeapons = (evolutionData.consumes & ItemData.Evolution.Consumption.weapons) > 0;
+
+        foreach (ItemData.Evolution.Config c in evolutionData.catalysts)
+        {
+            if (c.itemType is PassiveData && consumePassives) inventory.Remove(c.itemType, true);
+            if (c.itemType is WeaponData && consumeWeapons) inventory.Remove(c.itemType, true);
+        }
+
+        if (this is Passive && consumePassives) inventory.Remove((this as Passive).data, true);
+        else if (this is Weapon && consumeWeapons) inventory.Remove((this as Weapon).data, true);
+
+        inventory.Add(evolutionData.outcome.itemType, updateUI);
+
+        return true;
+    }
+
+    public virtual bool CanLevelUp()
+    {
+        return currentLevel < maxLevel;
+    }
+    public virtual bool DoLevelUp(bool updateUI = true)
+    {
+        if (evolutionData == null) return true;
+
+        foreach (ItemData.Evolution e in evolutionData)
+        {
+            if (e.condition == ItemData.Evolution.Condition.auto)
+                AttemptEvolution(e, 1, updateUI);
+        }
+        return true;
+    }
+    public virtual void OnEquip() { }
+    public virtual void OnUnequip() { }
+}

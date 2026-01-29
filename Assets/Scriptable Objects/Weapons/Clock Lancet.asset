@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62da1e7ea2535cc4797107be537dd4bb, type: 3}
+  m_Name: Clock Lancet
+  m_EditorClassIdentifier: 
+  icon: {fileID: -9006249375422868598, guid: 9a4fc81d095024a48880d86a3c54f2b7, type: 3}
+  maxLevel: 7
+  evolutionData:
+  - name: infinite Coridor
+    condition: 0
+    consumes: 2
+    evolutionLevel: 8
+    catalysts: []
+    outcome:
+      itemType: {fileID: 0}
+      level: 1
+  behaviour: ClockLancetWeapon
+  baseStats:
+    name: Clock Lancet
+    description: Chance to freeze enemies in time.
+    projectilePrefab: {fileID: -6260600558309341124, guid: 5a09452d29481ed4ea165e6ef6836a1e, type: 3}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 1
+    damage: 0
+    damageVariance: 0
+    area: 1
+    speed: 75
+    cooldown: 3
+    projectileInterval: 0.05
+    knockback: 0
+    number: 1
+    piercing: 9999
+    maxInstances: 30
+    appliedBuffs:
+    - data: {fileID: 11400000, guid: cfab293b43f2a7149b80c4d36f3e2b27, type: 2}
+      variant: 0
+      probability: 1
+  linearGrowth:
+  - name: Level 2
+    description: Effect lasts 1 seconds longer.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs:
+    - data: {fileID: 11400000, guid: cfab293b43f2a7149b80c4d36f3e2b27, type: 2}
+      variant: 1
+      probability: 1
+  - name: Level 3
+    description: Cooldown reduced by 0.5 seconds.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: -0.2
+      width: 0
+      height: 0.4
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: -0.5
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs: []
+  - name: Level 4
+    description: Effect lasts 1 seconds longer.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: -0.2
+      width: 0
+      height: 0.4
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs:
+    - data: {fileID: 11400000, guid: cfab293b43f2a7149b80c4d36f3e2b27, type: 2}
+      variant: 2
+      probability: 1
+  - name: Level 5
+    description: Effect lasts 1 seconds longer.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: -0.2
+      width: 0
+      height: 0.4
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs:
+    - data: {fileID: 11400000, guid: cfab293b43f2a7149b80c4d36f3e2b27, type: 2}
+      variant: 3
+      probability: 1
+  - name: Level 6
+    description: Cooldown reduced by 0.5 seconds.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: -0.2
+      width: 0
+      height: 0.4
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: -0.5
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs: []
+  - name: Level 7
+    description: Effect lasts 1 seconds longer.
+    projectilePrefab: {fileID: 0}
+    auraPrefab: {fileID: 0}
+    hitEffect: {fileID: 0}
+    procEffect: {fileID: 0}
+    spawnVariance:
+      serializedVersion: 2
+      x: 0
+      y: -0.2
+      width: 0
+      height: 0.4
+    lifespan: 0
+    damage: 0
+    damageVariance: 0
+    area: 0
+    speed: 0
+    cooldown: 0
+    projectileInterval: 0
+    knockback: 0
+    number: 0
+    piercing: 0
+    maxInstances: 0
+    appliedBuffs:
+    - data: {fileID: 11400000, guid: cfab293b43f2a7149b80c4d36f3e2b27, type: 2}
+      variant: 4
+      probability: 1
+  randomGrowth: []

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36439f6d448ed5248af0c34d4a8a37aa, type: 3}
+  m_Name: Venus Wave
+  m_EditorClassIdentifier: 
+  possibleSpawnPrefabs:
+  - {fileID: 128249755780293656, guid: 212358ae043464e4883f39014e90aea4, type: 3}
+  spawnInterval: {x: 1, y: 1}
+  spawnsPerTick: {x: 5, y: 5}
+  duration: 120
+  startingCount: 80
+  totalSpawns: 1000000
+  exitConditions: 1
+  mustKillAll: 0
+  spawnCount: 0

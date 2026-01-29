@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36439f6d448ed5248af0c34d4a8a37aa, type: 3}
+  m_Name: flower and mummy wave
+  m_EditorClassIdentifier: 
+  possibleSpawnPrefabs:
+  - {fileID: 2803338125085681032, guid: 58477f1e3ddf7cd4ba9520a64b855512, type: 3}
+  - {fileID: 2803338125085681032, guid: 58477f1e3ddf7cd4ba9520a64b855512, type: 3}
+  - {fileID: 461759420925149495, guid: b7b6940f329d4e0429613b9c172a808e, type: 3}
+  spawnInterval: {x: 1, y: 1}
+  spawnsPerTick: {x: 5, y: 5}
+  duration: 240
+  startingCount: 60
+  totalSpawns: 1000000
+  exitConditions: 1
+  mustKillAll: 0
+  spawnCount: 0

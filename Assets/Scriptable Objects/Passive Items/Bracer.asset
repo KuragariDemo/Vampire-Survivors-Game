@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d531c6a981a4bbf4a9fbbeb73cb20eca, type: 3}
+  m_Name: Bracer
+  m_EditorClassIdentifier: 
+  icon: {fileID: 7517485798860983342, guid: 9a4fc81d095024a48880d86a3c54f2b7, type: 3}
+  maxLevel: 5
+  evolutionData:
+  - name: thousand edge
+    condition: 1
+    consumes: 2
+    evolutionLevel: 5
+    catalysts:
+    - itemType: {fileID: 11400000, guid: e7a10ca980947e24b81e866263f0dce3, type: 2}
+      level: 2
+    outcome:
+      itemType: {fileID: 11400000, guid: bc6598c4bd173c84488f8e5d53c1eae4, type: 2}
+      level: 1
+  baseStats:
+    name: Bracer
+    description: Increases projectile speed by 10%.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      armor: 0
+      moveSpeed: 0
+      might: 0
+      area: 0
+      speed: 0.1
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
+      magnet: 0
+      revival: 0
+  growth:
+  - name: Level 2
+    description: Increases projectile speed by 10%.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      armor: 0
+      moveSpeed: 0
+      might: 0
+      area: 0
+      speed: 0.1
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
+      magnet: 0
+      revival: 0
+  - name: Level 3
+    description: Increases projectile speed by 10%.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      armor: 0
+      moveSpeed: 0
+      might: 0
+      area: 0
+      speed: 0.1
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
+      magnet: 0
+      revival: 0
+  - name: Level 4
+    description: Increases projectile speed by 10%.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      armor: 0
+      moveSpeed: 0
+      might: 0
+      area: 0
+      speed: 0.1
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
+      magnet: 0
+      revival: 0
+  - name: Level 5
+    description: Increases projectile speed by 10%.
+    boosts:
+      maxHealth: 0
+      recovery: 0
+      armor: 0
+      moveSpeed: 0
+      might: 0
+      area: 0
+      speed: 0.1
+      duration: 0
+      amount: 0
+      cooldown: 0
+      luck: 0
+      growth: 0
+      greed: 0
+      curse: 0
+      magnet: 0
+      revival: 0

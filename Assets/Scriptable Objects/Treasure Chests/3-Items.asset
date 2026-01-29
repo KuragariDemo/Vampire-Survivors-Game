@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6695fe25ab174a047b61359e3a65fa7e, type: 3}
+  m_Name: 3-Items
+  m_EditorClassIdentifier: 
+  profileName: Drop Profile
+  luckScaling: 1
+  baseDropChance: 10
+  animDuration: 9.5
+  hasFireworks: 0
+  fireworksDelay: 1
+  noOfItems: 3
+  beamColors:
+  - {r: 0.9356112, g: 0.4292453, b: 1, a: 0.6}
+  - {r: 0.8036322, g: 0.15566039, b: 1, a: 0.6}
+  - {r: 0.8039216, g: 0.15686275, b: 1, a: 0.6}
+  delayTime: 0
+  delayedBeams: 0
+  hasCurvedBeams: 0
+  curveBeamsSpawnTime: 0
+  maxCoins: 120
+  minCoins: 250
+  openingSound: {fileID: 8300000, guid: bce7f4b2dc17c554bb738ad97df4b892, type: 3}
