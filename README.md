@@ -36,7 +36,3 @@ You can download the **playable Windows build (.exe)** from Google Drive:
 
 > Note: This repository contains **source code only**.  
 > The executable file is provided separately for easy access and testing.
-
----
-
-## 📂 Project Structure
